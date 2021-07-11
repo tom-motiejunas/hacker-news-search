@@ -16,7 +16,7 @@ function isFirstPage(page, decrement) {
 }
 
 function isLastPage(page, pageNum, increment) {
-  if (page !== pageNum) {
+  if (page !== pageNum && pageNum != 0) {
     return (
       <button className="btn" onClick={increment}>
         <FontAwesomeIcon icon={faGreaterThan}></FontAwesomeIcon>

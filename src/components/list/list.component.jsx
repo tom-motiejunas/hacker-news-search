@@ -5,8 +5,6 @@ import "./list.component.css";
 import ListItem from "../list-item/list-item.component";
 import SearchNav from "../search-nav/search-nav.component";
 
-import stories from "../../stories";
-
 function returnPageArr(arr, page, perPage) {
   const startIndex = perPage * (page - 1);
   const endIndex = perPage * page;
@@ -17,13 +15,13 @@ function pageNum(arr, perPage) {
   return Math.ceil(arr.length / perPage);
 }
 
-function List() {
+function List({ stories }) {
   const [page, setPage] = useState(1);
 
   return (
     <section>
       <ul className="list-box">
-        {returnPageArr(stories, page, 5).map((el) => (
+        {returnPageArr(stories, page, 15).map((el) => (
           <ListItem
             key={el.id}
             author={el.by}
@@ -36,7 +34,7 @@ function List() {
       </ul>
       <SearchNav
         page={page}
-        pageNum={pageNum(stories, 5)}
+        pageNum={pageNum(stories, 15)}
         pageFunc={setPage}
       ></SearchNav>
     </section>

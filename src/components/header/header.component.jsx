@@ -6,7 +6,26 @@ import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 import Logo from "../../assets/logo.png";
 
-function Header() {
+function searchFunc(e, stories, setStories) {
+  const newStories = [];
+
+  e = e.toLowerCase();
+
+  stories.forEach((el) => {
+    if (el.title.toLowerCase().includes(e)) {
+      newStories.push(el);
+    }
+  });
+  setStories(newStories);
+}
+
+let oldStories = [];
+
+function Header({ stories, setStories }) {
+  if (oldStories.length === 0) {
+    oldStories = stories;
+  }
+
   return (
     <nav className="nav-bar">
       <div className="logo-box">
@@ -22,6 +41,7 @@ function Header() {
           name="search"
           className="search-field"
           placeholder="Search stories "
+          onChange={(e) => searchFunc(e.target.value, oldStories, setStories)}
         />
       </div>
     </nav>
