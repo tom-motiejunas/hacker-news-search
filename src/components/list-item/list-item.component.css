@@ -1,0 +1,10 @@
+.container {
+  padding: 0.2rem 1rem;
+}
+.title {
+  font-size: 16px;
+  padding: 0.2rem 0;
+}
+span:not(:last-child):after {
+  content: " | ";
+}

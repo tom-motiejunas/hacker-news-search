@@ -1,0 +1,9 @@
+.list-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin: 0 5rem;
+  background-color: #f4f4f4;
+  list-style: none;
+}
