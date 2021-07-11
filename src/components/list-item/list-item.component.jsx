@@ -14,8 +14,8 @@ class ListItem extends Component {
 
   render() {
     return (
-      <li className="container">
-        <h3 className="title">Automated Hydroponic System Build (2020)</h3>
+      <li className="stories-box">
+        <h3 className="title">{this.props.title}</h3>
         <div>
           <span className="points">{this.props.score} points</span>
           <span className="author">{this.props.author}</span>

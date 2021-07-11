@@ -41,4 +41,5 @@
   border: none;
   color: var(--main-color);
   font-size: 20px;
+  cursor: pointer;
 }

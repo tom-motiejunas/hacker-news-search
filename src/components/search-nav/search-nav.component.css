@@ -1,0 +1,31 @@
+.search-nav-box {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.search-nav-box li {
+  padding: 0.5rem 0.2rem;
+}
+.search-nav-box > button {
+  padding: 0.5rem 0.2rem;
+}
+
+.btn {
+  height: 30px;
+  width: 30px;
+  background-color: #fff;
+  border: 1px #333 solid;
+  color: #333;
+  cursor: pointer;
+}
+
+.active {
+  border: 1px var(--main-color) solid;
+  color: var(--main-color);
+}
+
+.hidden {
+  display: none;
+}

@@ -9,7 +9,7 @@ const stories = [
     ],
     score: 239,
     time: 1625967785,
-    title: "Automated Hydroponic System Build (2020)",
+    title: "Automated System Build (2020)",
     type: "story",
     url: "https://kylegabriel.com/projects/2020/06/automated-hydroponic-system-build.html",
   },
@@ -23,7 +23,7 @@ const stories = [
     ],
     score: 239,
     time: 1625967785,
-    title: "Automated Hydroponic System Build (2020)",
+    title: "Automated System Build (2020)",
     type: "story",
     url: "https://kylegabriel.com/projects/2020/06/automated-hydroponic-system-build.html",
   },
@@ -37,7 +37,7 @@ const stories = [
     ],
     score: 239,
     time: 1625967785,
-    title: "Automated Hydroponic System Build (2020)",
+    title: "Automated System Build (2020)",
     type: "story",
     url: "https://kylegabriel.com/projects/2020/06/automated-hydroponic-system-build.html",
   },
@@ -51,7 +51,7 @@ const stories = [
     ],
     score: 239,
     time: 1625967785,
-    title: "Automated Hydroponic System Build (2020)",
+    title: "Automated System Build (2020)",
     type: "story",
     url: "https://kylegabriel.com/projects/2020/06/automated-hydroponic-system-build.html",
   },
@@ -65,7 +65,7 @@ const stories = [
     ],
     score: 239,
     time: 1625967785,
-    title: "Automated Hydroponic System Build (2020)",
+    title: "Automated System Build (2020)",
     type: "story",
     url: "https://kylegabriel.com/projects/2020/06/automated-hydroponic-system-build.html",
   },
@@ -156,7 +156,7 @@ const stories = [
   {
     by: "NegatioN",
     descendants: 26,
-    id: 27147853,
+    id: 271469853,
     kids: [
       27798380, 27799577, 27798083, 27798258, 27799286, 27798157, 27798900,
       27798260, 27798226, 27799050,
@@ -170,7 +170,7 @@ const stories = [
   {
     by: "NegatioN",
     descendants: 26,
-    id: 27147853,
+    id: 27141053,
     kids: [
       27798380, 27799577, 27798083, 27798258, 27799286, 27798157, 27798900,
       27798260, 27798226, 27799050,
@@ -184,7 +184,7 @@ const stories = [
   {
     by: "NegatioN",
     descendants: 26,
-    id: 27147853,
+    id: 27147843,
     kids: [
       27798380, 27799577, 27798083, 27798258, 27799286, 27798157, 27798900,
       27798260, 27798226, 27799050,
@@ -198,7 +198,7 @@ const stories = [
   {
     by: "NegatioN",
     descendants: 26,
-    id: 27147853,
+    id: 27147833,
     kids: [
       27798380, 27799577, 27798083, 27798258, 27799286, 27798157, 27798900,
       27798260, 27798226, 27799050,
@@ -212,7 +212,7 @@ const stories = [
   {
     by: "NegatioN",
     descendants: 26,
-    id: 27147853,
+    id: 27147823,
     kids: [
       27798380, 27799577, 27798083, 27798258, 27799286, 27798157, 27798900,
       27798260, 27798226, 27799050,
@@ -226,7 +226,7 @@ const stories = [
   {
     by: "NegatioN",
     descendants: 26,
-    id: 27147853,
+    id: 27147803,
     kids: [
       27798380, 27799577, 27798083, 27798258, 27799286, 27798157, 27798900,
       27798260, 27798226, 27799050,
@@ -240,7 +240,7 @@ const stories = [
   {
     by: "NegatioN",
     descendants: 26,
-    id: 27147853,
+    id: 27147813,
     kids: [
       27798380, 27799577, 27798083, 27798258, 27799286, 27798157, 27798900,
       27798260, 27798226, 27799050,
