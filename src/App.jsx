@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import Header from "./components/header/header.component";
 import List from "./components/list/list.component";
@@ -7,19 +7,20 @@ import stories from "./stories";
 
 import "./App.css";
 
-function App() {
-  const [stor, setStor] = useState(stories);
+class App extends React.Component {
+  constructor() {
+    super();
+    this.state = stories;
+  }
 
-  return (
-    <div className="App">
-      <Header
-        className="App-header"
-        stories={stor}
-        setStories={setStor}
-      ></Header>
-      <List stories={stor}></List>
-    </div>
-  );
+  render() {
+    return (
+      <div className="App">
+        <Header className="App-header"></Header>
+        <List stories={this.state}></List>
+      </div>
+    );
+  }
 }
 
 export default App;

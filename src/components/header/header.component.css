@@ -5,40 +5,10 @@
   background: var(--main-color);
 }
 
-.search-box {
-  width: 700px;
-  display: flex;
-}
-
 .logo-box {
   display: flex;
   margin-right: 1rem;
   text-align: center;
   justify-content: center;
   align-items: center;
-}
-
-.search-field {
-  width: 500px;
-  height: 42px;
-  padding: 1rem;
-  border: none;
-  font-size: 20px;
-}
-
-.search-field:focus {
-  outline: none;
-}
-
-.search-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 42px;
-  width: 42px;
-  padding: 1rem;
-  background-color: #fff;
-  border: none;
-  color: var(--main-color);
-  font-size: 20px;
 }

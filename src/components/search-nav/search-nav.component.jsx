@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import "./search-nav.component.css";
 
@@ -25,20 +25,28 @@ function isLastPage(page, pageNum, increment) {
   }
 }
 
-function SearchNav(props) {
-  const increment = () => {
-    props.pageFunc(props.page + 1);
-  };
-  const decrement = () => {
-    props.pageFunc(props.page - 1);
-  };
-  const manual = (value) => {
-    props.pageFunc(value);
-  };
+function makeBtn(el, buttons, props, manual) {
+  buttons = [];
 
-  const buttons = [];
+  let lowerLim = 0;
+  let upperLim = 0;
 
-  for (let i = 0; i < props.pageNum; i++) {
+  // Show only 5 page boxes
+  if (el < 5) {
+    upperLim = el;
+    lowerLim = 0;
+  } else if (props.page + 2 > el) {
+    upperLim = el;
+    lowerLim = el - 5;
+  } else if (props.page - 2 < 1) {
+    upperLim = 5;
+    lowerLim = 0;
+  } else {
+    upperLim = props.page + 2;
+    lowerLim = props.page - 3;
+  }
+
+  for (let i = lowerLim; i < upperLim; i++) {
     if (i + 1 === props.page) {
       buttons.push(
         <li key={i}>
@@ -55,11 +63,32 @@ function SearchNav(props) {
       </li>
     );
   }
+  return buttons;
+}
+
+function SearchNav(props) {
+  const increment = () => {
+    props.pageFunc(props.page + 1);
+  };
+  const decrement = () => {
+    props.pageFunc(props.page - 1);
+  };
+  const manual = (value) => {
+    props.pageFunc(value);
+  };
+
+  let [buttons, setButtons] = useState([]);
+
+  useEffect(() => {
+    props.pageNum.then((el) => {
+      setButtons(makeBtn(el, buttons, props, manual));
+    });
+  }, [props]);
 
   return (
     <ul className="search-nav-box">
       {isFirstPage(props.page, decrement)}
-      {buttons}
+      {buttons.map((el) => el)}
       {isLastPage(props.page, props.pageNum, increment)}
     </ul>
   );
