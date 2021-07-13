@@ -2,25 +2,27 @@ import React, { useState, useEffect } from "react";
 
 import Header from "./components/header/header.component";
 import List from "./components/list/list.component";
+import SearchFor from "./components/search-for/search-for.component";
 
-import stories from "./stories";
+import requestFunc from "./stories";
 
 import "./App.css";
 
-class App extends React.Component {
-  constructor() {
-    super();
-    this.state = stories;
-  }
+function App() {
+  let [stories, setStories] = useState(requestFunc);
+  let [pref, setPref] = useState("top");
 
-  render() {
-    return (
-      <div className="App">
-        <Header className="App-header"></Header>
-        <List stories={this.state}></List>
-      </div>
-    );
-  }
+  useEffect(() => {
+    setStories(() => requestFunc(pref));
+  }, [pref]);
+
+  return (
+    <div className="App">
+      <Header className="App-header"></Header>
+      <SearchFor pref={pref} setPref={setPref}></SearchFor>
+      <List stories={stories}></List>
+    </div>
+  );
 }
 
 export default App;

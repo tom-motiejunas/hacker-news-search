@@ -1,0 +1,40 @@
+.dropdown {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  align-items: flex-start;
+  margin: 0 5rem;
+  background-color: #f4f4f4;
+  padding: 0.2rem 1rem;
+}
+
+.droplist {
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  display: none;
+  list-style: none;
+  background-color: #fff;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.droplist li {
+  padding: 1rem;
+}
+
+.selected {
+  cursor: pointer;
+  padding-right: 0.5rem;
+}
+
+.selected:hover + ul,
+.droplist:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+.droplist li:hover {
+  background-color: var(--main-color);
+}

@@ -5,6 +5,6 @@
   font-size: 16px;
   padding: 0.2rem 0;
 }
-span:not(:last-child):after {
+.story-info-box > span:not(:last-child):after {
   content: " | ";
 }

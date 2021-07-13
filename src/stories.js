@@ -1,12 +1,11 @@
-const requestFunc = async function () {
+const requestFunc = async function (pref = "top") {
+  pref = pref.toLowerCase();
   const request = await fetch(
-    "https://hacker-news.firebaseio.com/v0/topstories.json?print=pretty"
+    `https://hacker-news.firebaseio.com/v0/${pref}stories.json?print=pretty`
   );
   const data = await request.json();
 
   return data;
 };
 
-let userStories = requestFunc();
-
-export default userStories;
+export default requestFunc;

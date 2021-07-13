@@ -51,12 +51,12 @@ async function returnListItems(stories, setItems, page) {
   );
 }
 
-function List({ stories, setStor }) {
+function List({ stories }) {
   const [page, setPage] = useState(1);
   let [pageItems, setItems] = useState([]);
   useEffect(() => {
     return returnListItems(stories, setItems, page);
-  }, [page]);
+  }, [page, stories]);
 
   return (
     <section>
