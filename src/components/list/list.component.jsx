@@ -28,8 +28,9 @@ async function returnPageArr(arr, page, perPage) {
   return await getStories(arr.slice(startIndex, endIndex));
 }
 
-async function pageNum(arr, perPage) {
+async function pageNum(arr, perPage, setPageAmount) {
   const data = await arr;
+  setPageAmount(Math.ceil(data.length / perPage));
   return Math.ceil(data.length / perPage);
 }
 
@@ -54,16 +55,23 @@ async function returnListItems(stories, setItems, page) {
 function List({ stories }) {
   const [page, setPage] = useState(1);
   let [pageItems, setItems] = useState([]);
+  const [pageAmount, setPageAmount] = useState(1);
+
   useEffect(() => {
     return returnListItems(stories, setItems, page);
-  }, [page, stories]);
+  }, [page]);
+  useEffect(() => {
+    setPage(1);
+    pageNum(stories, 20, setPageAmount);
+    return returnListItems(stories, setItems, page);
+  }, [stories]);
 
   return (
     <section>
       <ul className="list-box">{pageItems.map((el) => el)}</ul>
       <SearchNav
         page={page}
-        pageNum={pageNum(stories, 15)}
+        pageNum={pageAmount}
         pageFunc={setPage}
       ></SearchNav>
     </section>

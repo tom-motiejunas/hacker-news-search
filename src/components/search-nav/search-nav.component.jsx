@@ -80,9 +80,7 @@ function SearchNav(props) {
   let [buttons, setButtons] = useState([]);
 
   useEffect(() => {
-    props.pageNum.then((el) => {
-      setButtons(makeBtn(el, buttons, props, manual));
-    });
+    setButtons(makeBtn(props.pageNum, buttons, props, manual));
   }, [props]);
 
   return (
