@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import "./search-nav.component.css";
+import "./search-nav.style.css";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGreaterThan, faLessThan } from "@fortawesome/free-solid-svg-icons";

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-import "./list.component.css";
+import "./list.style.css";
 
 import ListItem from "../list-item/list-item.component";
 import SearchNav from "../search-nav/search-nav.component";
@@ -36,7 +36,11 @@ async function pageNum(arr, perPage, setPageAmount) {
 
 async function returnListItems(stories, setItems, page) {
   const data = await stories;
-  const pageData = await returnPageArr(data, page, 20);
+  const pageData = await returnPageArr(
+    data,
+    page,
+    localStorage.getItem("storiesPerPage")
+  );
 
   setItems(
     pageData.map((el) => (
@@ -60,9 +64,10 @@ function List({ stories }) {
   useEffect(() => {
     return returnListItems(stories, setItems, page);
   }, [page]);
+
   useEffect(() => {
     setPage(1);
-    pageNum(stories, 20, setPageAmount);
+    pageNum(stories, localStorage.getItem("storiesPerPage"), setPageAmount);
     return returnListItems(stories, setItems, page);
   }, [stories]);
 

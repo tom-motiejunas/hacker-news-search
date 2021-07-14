@@ -1,6 +1,6 @@
 import React from "react";
 
-import "./search-for.component.css";
+import "./search-for.style.css";
 
 const choosePref = function (e, setPref) {
   if (e.target.localName !== "li") return;
