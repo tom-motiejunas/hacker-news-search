@@ -51,6 +51,7 @@ async function returnListItems(stories, setItems, page) {
         time={el.time}
         title={el.title}
         comments={el.descendants}
+        id={el.id}
       ></ListItem>
     ))
   );

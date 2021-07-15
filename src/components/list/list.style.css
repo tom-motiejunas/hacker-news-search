@@ -7,3 +7,9 @@
   background-color: #f4f4f4;
   list-style: none;
 }
+
+@media screen and (max-width: 768px) {
+  .list-box {
+    margin: 0;
+  }
+}

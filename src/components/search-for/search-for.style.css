@@ -38,3 +38,9 @@
 .droplist li:hover {
   background-color: var(--main-color);
 }
+
+@media screen and (max-width: 768px) {
+  .dropdown {
+    margin: 0;
+  }
+}
